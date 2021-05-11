@@ -1,4 +1,16 @@
 
+fn fizzbuzz0(i: u32) -> String {
+    if i % 3 == 0 && i % 5 == 0 {
+        "FizzBuzz".to_owned()
+    } else if i % 3 == 0 {
+        "Fizz".to_owned(),
+    } else if i % 5 == 0 {
+        "FizzBuzz".to_owned()
+    } else {
+        format!("{}", i)
+    }
+}
+
 fn fizzbuzz1(i: u32) -> String {
     match (i % 3, i % 5) {
         (0, 0) => "FizzBuzz".to_owned(),
